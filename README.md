@@ -20,9 +20,9 @@ Key steps covered:
 ## 📁 Repository Contents
 
 📦 Predictive-Modeling-of-Ames-Housing-Data
-├── Ames_Housing_Modeling_Fixed.ipynb # Main Jupyter notebook
-├── README.md # Project description and instructions
-└── requirements.txt # Python dependencies (optional)
+      ├── Ames_Housing_Modeling_Fixed.ipynb # Main Jupyter notebook
+      ├── README.md # Project description and instructions
+      └── requirements.txt # Python dependencies (optional)
 
 
 ---
@@ -107,8 +107,3 @@ Developed by Aminul — feel free to connect or suggest improvements!
 
 
 ---
-
-Let me know if you'd like:
-- A `requirements.txt` file auto-generated
-- Visualization plots added
-- A cleaned version of this project published as a GitHub repository template
