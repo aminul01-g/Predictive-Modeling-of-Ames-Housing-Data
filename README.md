@@ -6,10 +6,11 @@ This project builds accurate and interpretable machine learning models to predic
 
 ## 📁 Project Structure
 
-Predictive-Modeling-of-Ames-Housing-Data/
-├── notebooks/ # Jupyter notebooks for each modeling stage
-├── README.md # Project overview and usage
-└── requirements.txt # Dependencies
+-Predictive-Modeling-of-Ames-Housing-Data/
+
+  - notebooks/ # Jupyter notebooks for each modeling stage
+  - README.md # Project overview and usage
+  - requirements.txt # Dependencies
 
 
 ---
