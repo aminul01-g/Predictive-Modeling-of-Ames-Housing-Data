@@ -1,101 +1,114 @@
-# 🏡 Predictive Modeling of Ames Housing Data
+# 🏡 Predictive Modeling of Ames Housing Data (Simulated Version)
 
-This project builds accurate and interpretable machine learning models to predict house prices using the **Ames Housing dataset**. It covers data preprocessing, feature engineering, model selection, training, and evaluation using various regression techniques.
-
----
-
-## 📁 Project Structure
-
--Predictive-Modeling-of-Ames-Housing-Data/
-
-  - notebooks/ # Jupyter notebooks for each modeling stage
-  - README.md # Project overview and usage
-  - requirements.txt # Dependencies
-
+This project demonstrates a full machine learning pipeline for predicting house prices using a simulated version of the **Ames Housing dataset**. The workflow includes data simulation, preprocessing, feature engineering, model training, evaluation, and interpretation — all within a single Jupyter notebook.
 
 ---
 
-## 📌 Problem Statement
+## 📌 Overview
 
-Predict house sale prices in Ames, Iowa using detailed property features like zoning, lot size, year built, quality, condition, and more.
+The goal is to build and compare different regression models to predict the log-transformed house prices (`SalePrice`) based on important structural and neighborhood features.
 
----
-
-## ✅ Features
-
-- Exploratory Data Analysis (EDA)
-- Data Cleaning & Imputation
-- Feature Engineering
-- Outlier Removal
-- Skewness Correction
-- Categorical Encoding
-- Model Training:
-  - Linear Regression
-  - Lasso, Ridge
-- Cross-Validation & Hyperparameter Tuning
-- Performance Evaluation (RMSE, R²)
+Key steps covered:
+- Simulating an Ames-like dataset
+- Data cleaning and feature transformation
+- Pipeline creation using Scikit-Learn
+- Model comparison (Linear Regression, Ridge, Lasso)
+- Interpretation of Ridge Regression coefficients
 
 ---
 
-## 📊 Dataset
+## 📁 Repository Contents
 
-- **Source**: [Ames Housing Dataset](https://storage.googleapis.com/cloud-samples-data/ai-platform-unified/datasets/tabular/petrol-consumption.csv)
-- **Rows**: 200
-- **Features**: 9
-- **Target**: `SalePrice`
+📦 Predictive-Modeling-of-Ames-Housing-Data
+├── Ames_Housing_Modeling_Fixed.ipynb # Main Jupyter notebook
+├── README.md # Project description and instructions
+└── requirements.txt # Python dependencies (optional)
 
----
-
-## 📈 Model Performance
-
-| Model            | RMSE (CV) | R² Score |
-|------------------|-----------|----------|
-| Linear Regression|  0.3923   |  -0.2125 |
-| Ridge            |  0.3881   |  -0.1870 |
-| Lasso            |  0.3851   |  -0.1692 |
 
 ---
 
-## 🚀 Getting Started
+## 📈 Dataset Description
 
-### 1. Clone the Repository
+The dataset used here is a **simulated subset** of the Ames Housing dataset. It mimics real-world property data with fields such as:
+
+- `OverallQual`: Overall material and finish quality
+- `GrLivArea`: Above grade (ground) living area square feet
+- `GarageCars`: Size of garage in car capacity
+- `LotFrontage`: Linear feet of street connected to property
+- `Neighborhood`: Physical locations within Ames city
+- `SalePrice`: Log-transformed sale price of the house (target)
+
+---
+
+## 🧪 Models Used
+
+- **Linear Regression**
+- **Ridge Regression** (α = 10)
+- **Lasso Regression** (α = 0.01)
+
+Model performance is evaluated using:
+- **Cross-validated R² Score**
+- **Root Mean Squared Error (RMSE)**
+
+---
+
+## 🧠 Key Findings
+
+- **Ridge Regression** demonstrated the most robust and consistent performance across folds.
+- Important predictors include `Neighborhood`, `HouseAge`, and `GrLivArea`.
+- The notebook includes coefficient interpretation to explain model decisions.
+
+---
+
+## 🚀 How to Run
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/aminul01-g/Predictive-Modeling-of-Ames-Housing-Data.git
 cd Predictive-Modeling-of-Ames-Housing-Data
 ```
-### 2. Install Dependencies
 
+### 2. Launch Jupyter Notebook
+If Jupyter is installed:
+
+```bash
+jupyter notebook Ames_Housing_Modeling_Fixed.ipynb
+```
+Or open it in Google Colab (recommended for beginners).
+
+### 📦 Requirements
+Install the necessary packages using:
 ```bash
 pip install -r requirements.txt
 ```
-## 🧪 Requirements
+Or manually ensure the following are installed:
 
-- Python 3.8+
+Python 3.8+
 
-- pandas
+pandas
 
-- numpy
+numpy
 
-- scikit-learn
+scikit-learn
 
-- xgboost
-
-- matplotlib
-
-- seaborn
-
-- jupyter
+matplotlib (optional for visualizations)
 
 ### 📚 References
-- Dean De Cock - Original Paper
+[Original Ames Housing Dataset](https://jse.amstat.org/v19n3/decock.pdf)
 
-- Kaggle House Prices Competition
+[Scikit-Learn Documentation](https://scikit-learn.org/stable/user_guide.html)
 
 ### 📄 License
-This project is licensed under the MIT License. See LICENSE for details.
+This project is licensed under the MIT License.
+
+### 🙋‍♂️ Author
+Developed by Aminul — feel free to connect or suggest improvements!
+
 
 ---
 
-Let me know if you want a customized badge section, sample visualizations, or `requirements.txt` generated automatically!
-
+Let me know if you'd like:
+- A `requirements.txt` file auto-generated
+- Visualization plots added
+- A cleaned version of this project published as a GitHub repository template
